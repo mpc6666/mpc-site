@@ -1,0 +1,63 @@
+baseURL = "https://mpccarbide.com"
+title = "Micro-Precision Carbide "
+languageCode = "zh"
+DefaultContentLanguage = "zh"
+enableInlineShortcodes = true
+theme = "tella"
+enableRobotsTXT = true
+
+
+[params]
+
+  showBlog = true
+  mainSections = ['product']
+  blogTitle = "Main Products"
+  companyName = "Micro-Precision Carbide"
+  googleFonts = true
+
+  [params.logo]
+    main = "img/logo/favicon.png"
+    alt = "WC Logo"
+    size = "h-14"
+
+  [params.site]
+  
+
+  [params.icon]
+    fontawesome = true
+
+  [params.homepage_meta_tags]
+   
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "products"
+    name = "Products"
+    url = "/product/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+  # Footer Menu
+  [[menu.footer]]
+    name = "Home"
+    url = "/"
+      weight = 1
+
+ 

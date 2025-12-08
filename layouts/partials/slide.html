@@ -1,0 +1,20 @@
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        {{ range .Site.Data.slide }}
+        <div class="swiper-slide">
+            <img src="{{ .image }}" alt="{{ .alt }}">
+            <div class="s-fade-txt" style="text-align: center;">}
+                {{ if eq .image "img/slide/slide03.jpg" }}
+                <h1 class="text-6xl font-bold" style="color: #22d3ee !important;">
+                    {{ .title }}
+                </h1>
+                {{ else }}
+                <h1 class="{{ or .color "text-white" }} {{ .class }} text-6xl font-bold">{{ .title }}</h1>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
