@@ -1,7 +1,8 @@
 {
   "build": {
     "env": {
-      "HUGO_VERSION": "0.140.0"
-    }
+      "HUGO_VERSION": "0.140.0-extended"
+    },
+    "command": "npm run build"
   }
 }
