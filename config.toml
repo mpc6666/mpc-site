@@ -18,7 +18,7 @@ enableRobotsTXT = true
 [params]
 
   showBlog = true
-  mainSections = ['主营产品']
+  mainSections = ['Mian products']
 
   googleFonts = true
 
@@ -47,6 +47,10 @@ enableRobotsTXT = true
     meta_twitter_card = "summary_large_image"
     meta_twitter_site = "@username"
     meta_twitter_creator = "@username"
+
+  [params.contact]
+    email = "info@mpccarbide.com"
+    phone = "+86-18681336970"
 
 [menu]
 
