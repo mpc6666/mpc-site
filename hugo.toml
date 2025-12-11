@@ -62,12 +62,14 @@ enableRobotsTXT = true
   [[menu.footer]]
     name = "Home"
     url = "/"
-      weight = 3
+    weight = 3
   [[menu.footer]]
-  name = "Email: info@mpccarbide.com"  
+    name = "Email: info@mpccarbide.com"
+    url = "/contact/"
     weight=1 
 
   [[menu.footer]]
-  name = "Phone: +86-18681336970"    
+    name = "Phone: +86-18681336970"  
+    url = "/contact/"
     weight=2
  
