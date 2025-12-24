@@ -2,12 +2,14 @@
   {
     "title": "Custom Non-Standard & Complex Shapes",
     "description": "Custom tungsten carbide components tailored to specific requirements, solving challenges in specialized applications.",
-    "icon": "icon-create"
+    "icon": "icon-create",
+    "link": ""
   },
   {
     "title": "Advanced Target Material Technology",
     "description": "High-purity hard alloy (WC) targets with uniform microstructure, offering excellent sputtering performance and stability.",
-    "icon": "icon-lightbulb_outline"
+    "icon": "icon-lightbulb_outline",
+    "link": ""
   },
   {
     "title": "Extended Service Life",

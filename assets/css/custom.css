@@ -1,6 +1,281 @@
-﻿/* 使用更具体的选择器覆盖Tailwind */
-.swiper-slide h1.text-4xl.text-white {
-    font-size: 4.5rem !important;
-    font-weight: bold !important;
-    line-height: 1.2 !important;
+#inquiryForm .form-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    #inquiryForm .form-container {
+        padding: 2rem;
+    }
+}
+
+#inquiryForm .form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+    #inquiryForm .form-header h1 {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+    }
+
+    #inquiryForm .form-header p {
+        color: #4b5563;
+        line-height: 1.5;
+    }
+
+#inquiryForm .form-section {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+    #inquiryForm .form-section h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+#inquiryForm .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    #inquiryForm .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+#inquiryForm .form-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+    #inquiryForm .form-field.full-width {
+        grid-column: 1 / -1;
+    }
+
+#inquiryForm label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.375rem;
+    display: block;
+}
+
+#inquiryForm input[type="text"],
+#inquiryForm input[type="email"],
+#inquiryForm input[type="tel"],
+#inquiryForm input[type="url"],
+#inquiryForm select,
+#inquiryForm textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: inherit;
+    background-color: white;
+}
+
+#inquiryForm input[type="text"],
+#inquiryForm input[type="email"],
+#inquiryForm input[type="tel"],
+#inquiryForm input[type="url"],
+#inquiryForm select {
+    height: 3rem;
+}
+
+#inquiryForm select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+}
+
+#inquiryForm textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+    #inquiryForm input:focus,
+    #inquiryForm select:focus,
+    #inquiryForm textarea:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+#inquiryForm .field-error {
+    display: none;
+    font-size: 0.75rem;
+    color: #dc2626;
+    margin-top: 0.25rem;
+}
+
+    #inquiryForm .field-error.show {
+        display: block;
+    }
+
+#inquiryForm .field-invalid {
+    border-color: #dc2626 !important;
+    background-color: #fef2f2;
+}
+
+#inquiryForm .field-valid {
+    border-color: #10b981 !important;
+}
+
+#inquiryForm .field-hint {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+}
+
+#inquiryForm .privacy-section {
+    background-color: #eff6ff;
+    border-color: #dbeafe;
+}
+
+#inquiryForm .privacy-agreement {
+    display: flex;
+    align-items: flex-start;
+}
+
+    #inquiryForm .privacy-agreement input[type="checkbox"] {
+        margin-top: 0.25rem;
+        margin-right: 0.75rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 0.25rem;
+        border: 1px solid #d1d5db;
+    }
+
+        #inquiryForm .privacy-agreement input[type="checkbox"]:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+#inquiryForm .privacy-content {
+    flex: 1;
+}
+
+    #inquiryForm .privacy-content p {
+        font-size: 0.875rem;
+        color: #4b5563;
+        line-height: 1.5;
+        margin-top: 0.25rem;
+    }
+
+    #inquiryForm .privacy-content a {
+        color: #3b82f6;
+        text-decoration: underline;
+    }
+
+        #inquiryForm .privacy-content a:hover {
+            color: #1d4ed8;
+        }
+
+#inquiryForm .form-submit {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#inquiryForm button[type="submit"] {
+    background: linear-gradient(to right, #2563eb, #1e40af);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+}
+
+    #inquiryForm button[type="submit"]:hover {
+        background: linear-gradient(to right, #1d4ed8, #1e3a8a);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    #inquiryForm button[type="submit"]:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none !important;
+    }
+
+#inquiryForm .trust-notice {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 1rem;
+}
+
+    #inquiryForm .trust-notice p {
+        font-size: 0.75rem;
+        color: #6b7280;
+        line-height: 1.5;
+    }
+
+#inquiryForm .form-success {
+    background-color: #d1fae5;
+    border: 1px solid #a7f3d0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+    #inquiryForm .form-success h3 {
+        color: #065f46;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    #inquiryForm .form-success p {
+        color: #047857;
+    }
+
+#inquiryForm .form-error {
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    color: #991b1b;
+}
+
+@media (max-width: 767px) {
+    #inquiryForm .form-header h1 {
+        font-size: 1.5rem;
+    }
+
+    #inquiryForm .form-section {
+        padding: 1rem;
+    }
+
+    #inquiryForm button[type="submit"] {
+        width: 100%;
+        padding: 0.875rem 1rem;
+    }
 }

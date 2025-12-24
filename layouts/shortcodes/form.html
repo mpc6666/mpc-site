@@ -1,43 +1,619 @@
-﻿<form name="contact" action="https://getform.io/f/aolqgzqb" method="POST">
-    <!-- Basic Information -->
-    <div class="input mb-4">
-        <input type="text" placeholder="Name *" name="name" class="w-full p-4 bg-gray-100 border border-gray-300 focus:outline-none focus:bg-white focus:border-blue-500" required>
-    </div>
-    <div class="input mb-4">
-        <input type="email" placeholder="Email *" name="mail" class="w-full p-4 bg-gray-100 border border-gray-300 focus:outline-none focus:bg-white focus:border-blue-500" required>
-    </div>
-    <div class="input mb-4">
-        <input type="text" placeholder="Company" name="company" class="w-full p-4 bg-gray-100 border border-gray-300 focus:outline-none focus:bg-white focus:border-blue-500">
-    </div>
-    <div class="input mb-4">
-        <input type="tel" placeholder="Phone or WhatsApp" name="phone" class="w-full p-4 bg-gray-100 border border-gray-300 focus:outline-none focus:bg-white focus:border-blue-500">
-    </div>
-    <div class="input mb-4">
-        <input type="text" placeholder="Country" name="country" class="w-full p-4 bg-gray-100 border border-gray-300 focus:outline-none focus:bg-white focus:border-blue-500">
-    </div>
+<div class="multilang-form-container" id="inquiryFormContainer">
+    <form id="inquiryForm" action="https://getform.io/f/aolqgzqb" method="POST" novalidate>
+        <input type="hidden" name="language" value="{{ .Site.Language.Lang }}">
 
-    <!-- Product Interest (Dropdown) -->
-    <div class="input mb-4">
-        <select name="product-interest" class="w-full p-4 bg-gray-100 border border-gray-300 focus:outline-none focus:bg-white focus:border-blue-500" required>
-            <option value="" disabled selected>Product Interest *</option>
-            <option value="tungsten-carbide-target">Tungsten Carbide Target</option>
-            <option value="custom-carbide-parts">Custom Carbide Parts</option>
-            <option value="other">Other</option>
-        </select>
-    </div>
+        <style>
+            #inquiryFormContainer.multilang-form-container {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                line-height: 1.6;
+                color: #2d3748;
+                max-width: 800px;
+                margin: 2rem auto;
+                box-sizing: border-box;
+            }
 
-    <!-- Specific Requirements -->
-    <div class="input mb-4">
-        <textarea rows="5" placeholder="Specific Requirements or Message *" name="message" class="w-full p-4 bg-gray-100 border border-gray-300 focus:outline-none focus:bg-white focus:border-blue-500" required></textarea>
-    </div>
+            #inquiryFormContainer .form-header {
+                text-align: center;
+                margin-bottom: 2.5rem;
+                padding: 0 1rem;
+            }
 
-    <!-- Submit Button -->
-    <div class="input">
-        <input type="submit" value="Send Inquiry" class="px-8 py-3 w-full font-medium duration-200 bg-gray-800 text-white cursor-pointer transition-colors hover:bg-gray-600">
-    </div>
+            #inquiryFormContainer .form-title {
+                font-size: 2rem;
+                font-weight: 700;
+                color: #1a202c;
+                margin-bottom: 0.75rem;
+            }
 
-    <!-- Privacy Note (Optional) -->
-    <p class="mt-4 text-xs text-gray-500">
-        Your information will be kept strictly confidential and used only for business communication.
-    </p>
-</form>
+            #inquiryFormContainer .form-subtitle {
+                font-size: 1.125rem;
+                color: #4a5568;
+                max-width: 600px;
+                margin: 0 auto;
+                line-height: 1.5;
+            }
+
+                #inquiryFormContainer .form-subtitle strong {
+                    color: #2b6cb0;
+                }
+
+            #inquiryFormContainer .form-section {
+                background: white;
+                border: 1px solid #e2e8f0;
+                border-radius: 10px;
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+                box-sizing: border-box;
+                position: relative;
+                z-index: 1;
+            }
+
+            #inquiryFormContainer .section-title {
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: #2d3748;
+                margin-bottom: 1.25rem;
+                padding-bottom: 0.75rem;
+                border-bottom: 1px solid #e2e8f0;
+            }
+
+            #inquiryFormContainer .form-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+                width: 100%;
+            }
+
+            @media (min-width: 768px) {
+                #inquiryFormContainer .form-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1.5rem;
+                    align-items: start;
+                }
+            }
+
+            #inquiryFormContainer .form-field {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            @media (min-width: 768px) {
+                #inquiryFormContainer .form-field {
+                    min-height: 90px; /* 适当的最小高度，确保对齐但不至于过大 */
+                    height: auto;
+                }
+            }
+
+            #inquiryFormContainer .full-width {
+                grid-column: 1 / -1;
+            }
+
+            #inquiryFormContainer .form-label {
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: #4a5568;
+                margin-bottom: 0.5rem;
+                display: block;
+                min-height: 1.5rem;
+                line-height: 1.4;
+            }
+
+            #inquiryFormContainer .required::after {
+                content: " *";
+                color: #e53e3e;
+            }
+
+            #inquiryFormContainer .input-container {
+                width: 100%;
+                position: relative;
+                box-sizing: border-box;
+            }
+
+            #inquiryFormContainer .form-input,
+            #inquiryFormContainer .form-select,
+            #inquiryFormContainer .form-textarea {
+                width: 100%;
+                padding: 0.75rem 1rem;
+                border: 1px solid #cbd5e0;
+                border-radius: 6px;
+                font-size: 1rem;
+                font-family: inherit;
+                background-color: white;
+                box-sizing: border-box;
+                transition: all 0.2s;
+                line-height: 1.5;
+            }
+
+            #inquiryFormContainer .form-input,
+            #inquiryFormContainer .form-select {
+                height: 48px;
+            }
+
+            #inquiryFormContainer .form-select {
+                appearance: none;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%234a5568' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+                background-position: right 0.75rem center;
+                background-repeat: no-repeat;
+                background-size: 1.25em 1.25em;
+                padding-right: 2.5rem;
+            }
+
+            #inquiryFormContainer .form-textarea {
+                min-height: 140px;
+                resize: vertical;
+                line-height: 1.5;
+            }
+
+                #inquiryFormContainer .form-input:focus,
+                #inquiryFormContainer .form-select:focus,
+                #inquiryFormContainer .form-textarea:focus {
+                    outline: none;
+                    border-color: #4299e1;
+                    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+                }
+
+            #inquiryFormContainer .error {
+                border-color: #e53e3e !important;
+                background-color: #fff5f5 !important;
+            }
+
+            #inquiryFormContainer .error-message {
+                display: none;
+                font-size: 0.8125rem;
+                color: #e53e3e;
+                margin-top: 0.375rem;
+                font-weight: 500;
+                min-height: 1.25rem;
+            }
+
+            #inquiryFormContainer .show {
+                display: block !important;
+            }
+
+            #inquiryFormContainer .field-hint {
+                font-size: 0.8125rem;
+                color: #718096;
+                margin-top: 0.5rem;
+                font-style: italic;
+            }
+            #inquiryFormContainer .privacy-section {
+                background-color: #ebf8ff;
+                border-color: #bee3f8;
+                margin-top: 1rem;
+                margin-bottom: 1.5rem;
+                position: relative;
+                z-index: 2;
+            }
+
+            #inquiryFormContainer .privacy-checkbox {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+
+                #inquiryFormContainer .privacy-checkbox input[type="checkbox"] {
+                    margin-top: 0.25rem;
+                    flex-shrink: 0;
+                    width: 1.125rem;
+                    height: 1.125rem;
+                    border-radius: 4px;
+                    border: 1px solid #cbd5e0;
+                }
+
+            #inquiryFormContainer .privacy-content {
+                flex: 1;
+            }
+
+            #inquiryFormContainer .privacy-text {
+                font-size: 0.875rem;
+                color: #2d3748;
+                line-height: 1.5;
+            }
+
+                #inquiryFormContainer .privacy-text a {
+                    color: #3182ce;
+                    text-decoration: underline;
+                    font-weight: 500;
+                }
+            #inquiryFormContainer .form-submit {
+                text-align: center;
+                margin: 2rem 0;
+                position: relative;
+                z-index: 3;
+                clear: both;
+            }
+
+            #inquiryFormContainer .submit-btn {
+                background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+                color: white;
+                font-weight: 600;
+                font-size: 1rem;
+                padding: 1rem 3rem;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.25s ease;
+                box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11);
+                min-width: 220px;
+            }
+
+                #inquiryFormContainer .submit-btn:hover:not(:disabled) {
+                    background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+                    transform: translateY(-2px);
+                    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1);
+                }
+
+                #inquiryFormContainer .submit-btn:disabled {
+                    opacity: 0.6;
+                    cursor: not-allowed;
+                    transform: none !important;
+                }
+
+            #inquiryFormContainer .success {
+                background: linear-gradient(135deg, #38a169 0%, #2f855a 100%) !important;
+            }
+
+            #inquiryFormContainer .trust-notice {
+                text-align: center;
+                padding-top: 1.25rem;
+                border-top: 1px solid #e2e8f0;
+                margin-top: 1.5rem;
+                font-size: 0.8125rem;
+                color: #718096;
+                line-height: 1.4;
+            }
+
+            #inquiryFormContainer .success-message {
+                background: #c6f6d5;
+                border: 1px solid #9ae6b4;
+                border-radius: 8px;
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+                text-align: center;
+            }
+
+            #inquiryFormContainer .success-title {
+                color: #22543d;
+                font-weight: 700;
+                font-size: 1.25rem;
+                margin-bottom: 0.5rem;
+            }
+
+            #inquiryFormContainer .success-text {
+                color: #276749;
+            }
+
+            @media (max-width: 767px) {
+                #inquiryFormContainer.multilang-form-container {
+                    margin: 1rem auto;
+                }
+
+                #inquiryFormContainer .form-title {
+                    font-size: 1.75rem;
+                }
+
+                #inquiryFormContainer .form-subtitle {
+                    font-size: 1rem;
+                }
+
+                #inquiryFormContainer .form-section {
+                    padding: 1.25rem;
+                }
+
+                #inquiryFormContainer .form-field {
+                    margin-bottom: 1.25rem;
+                }
+
+                #inquiryFormContainer .submit-btn {
+                    width: 100%;
+                    padding: 0.875rem 1rem;
+                }
+            }
+        </style>
+
+        <div class="form-header">
+            <h1 class="form-title">{{ i18n "form_title" }}</h1>
+            <p class="form-subtitle">{{ i18n "form_subtitle" | safeHTML }}</p>
+        </div>
+
+        <div class="form-sections">
+            <div class="form-section">
+                <h2 class="section-title">{{ i18n "section_contact" }}</h2>
+                <div class="form-grid">
+                    <div class="form-field">
+                        <div class="label-container">
+                            <label for="name" class="form-label required">{{ i18n "label_name" }}</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" id="name" name="name" class="form-input"
+                                   placeholder="{{ i18n `placeholder_name` }}"
+                                   required minlength="2">
+                        </div>
+                        <div class="error-message" data-for="name">{{ i18n "error_name" }}</div>
+                    </div>
+
+                    <div class="form-field">
+                        <div class="label-container">
+                            <label for="email" class="form-label required">{{ i18n "label_email" }}</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="email" id="email" name="email" class="form-input"
+                                   placeholder="{{ i18n `placeholder_email` }}"
+                                   required>
+                        </div>
+                        <div class="error-message" data-for="email">{{ i18n "error_email" }}</div>
+                    </div>
+
+                    <div class="form-field">
+                        <div class="label-container">
+                            <label for="company" class="form-label">{{ i18n "label_company" }}</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" id="company" name="company" class="form-input"
+                                   placeholder="{{ i18n `placeholder_company` }}">
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <div class="label-container">
+                            <label for="country" class="form-label">{{ i18n "label_country" }}</label>
+                        </div>
+                        <div class="input-container">
+                            <select id="country" name="country" class="form-select">
+                                <option value="">{{ i18n "placeholder_country_default" }}</option>
+                                <optgroup label="{{ i18n `country_group_eu_na` }}">
+                                    <option value="US">United States</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="IT">Italy</option>
+                                    <option value="FR">France</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="CA">Canada</option>
+                                </optgroup>
+                                <optgroup label="{{ i18n `country_group_other` }}">
+                                    <option value="OTHER">{{ i18n "country_option_other" }}</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <div class="label-container">
+                            <label for="phone" class="form-label">{{ i18n "label_phone" }}</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="tel" id="phone" name="phone" class="form-input"
+                                   placeholder="{{ i18n `placeholder_phone` }}">
+                        </div>
+                        <div class="error-message" data-for="phone">{{ i18n "error_phone" }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2 class="section-title">{{ i18n "section_product" }}</h2>
+
+                <div class="form-field full-width">
+                    <div class="label-container">
+                        <label for="product-interest" class="form-label required">{{ i18n "label_product" }}</label>
+                    </div>
+                    <div class="input-container">
+                        <select id="product-interest" name="product-interest" class="form-select" required>
+                            <option value="" disabled selected>{{ i18n "placeholder_product_default" }}</option>
+                            <optgroup label="{{ i18n `product_group_cutting` }}">
+                                <option value="cutting-insert">{{ i18n "product_cutting_insert" }}</option>
+                                <option value="cutting-tool">{{ i18n "product_cutting_tool" }}</option>
+                            </optgroup>
+                            <optgroup label="{{ i18n `product_group_mining` }}">
+                                <option value="mining-tools">{{ i18n "product_mining_tools" }}</option>
+                                <option value="mining-carbide-parts">{{ i18n "product_mining_parts" }}</option>
+                                <option value="wear-resistant-alloy">{{ i18n "product_wear_resistant" }}</option>
+                            </optgroup>
+                            <optgroup label="{{ i18n `product_group_precision` }}">
+                                <option value="precision-components">{{ i18n "product_precision_components" }}</option>
+                                <option value="large-scale-alloy-parts">{{ i18n "product_large_scale_parts" }}</option>
+                                <option value="profiles-products">{{ i18n "product_profiles" }}</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="error-message" data-for="product-interest">{{ i18n "error_required" }}</div>
+                </div>
+
+                <!-- 消息 -->
+                <div class="form-field full-width">
+                    <div class="label-container">
+                        <label for="message" class="form-label required">{{ i18n "label_message" }}</label>
+                    </div>
+                    <div class="input-container">
+                        <textarea id="message" name="message" class="form-textarea"
+                                  placeholder="{{ i18n `placeholder_message` }}"
+                                  required minlength="20"></textarea>
+                    </div>
+                    <div class="error-message" data-for="message">{{ i18n "error_message" }}</div>
+                    <p class="field-hint">{{ i18n "field_hint" }}</p>
+                </div>
+            </div>
+
+            <div class="form-section privacy-section">
+                <div class="privacy-checkbox">
+                    <input type="checkbox" id="privacy-consent" name="privacy_consent" required>
+                    <div class="privacy-content">
+                        <label for="privacy-consent" class="form-label required">{{ i18n "label_privacy" }}</label>
+                        <p class="privacy-text">{{ i18n "privacy_text" | safeHTML }}</p>
+                    </div>
+                </div>
+                <div class="error-message" data-for="privacy-consent">{{ i18n "error_privacy" }}</div>
+            </div>
+
+            <div class="form-submit">
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span id="btnText">{{ i18n "btn_submit" }}</span>
+                </button>
+            </div>
+
+            <div class="trust-notice">
+                <p>{{ i18n "trust_notice" | safeHTML }}</p>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('inquiryForm');
+        if (!form) return;
+
+        const currentLang = document.querySelector('input[name="language"]')?.value || 'en';
+        const isGerman = currentLang === 'de';
+
+        document.querySelectorAll('.error-message').forEach(el => {
+            el.style.display = 'none';
+        });
+
+        const validateField = (field) => {
+            const errorEl = form.querySelector(`[data-for="${field.id || field.name}"]`);
+            if (!errorEl) return true;
+
+            errorEl.style.display = 'none';
+            field.classList.remove('error');
+
+            let isValid = true;
+
+            if (field.hasAttribute('required')) {
+                if (field.type === 'checkbox') {
+                    isValid = field.checked;
+                } else {
+                    isValid = field.value.trim() !== '';
+                }
+            }
+
+            if (field.type === 'email' && field.value.trim() !== '') {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                isValid = emailRegex.test(field.value.trim());
+            }
+
+            if (field.hasAttribute('minlength') && field.value.trim() !== '') {
+                const minLength = parseInt(field.getAttribute('minlength'));
+                isValid = field.value.trim().length >= minLength;
+            }
+
+            if (field.type === 'tel' && field.value.trim() !== '') {
+                const phoneDigits = field.value.replace(/\D/g, '');
+                if (phoneDigits.length > 0 && phoneDigits.length < 7) {
+                    isValid = false;
+                }
+            }
+
+            if (!isValid) {
+                errorEl.style.display = 'block';
+                errorEl.classList.add('show');
+                field.classList.add('error');
+            }
+
+            return isValid;
+        };
+
+        form.querySelectorAll('input, select, textarea').forEach(field => {
+            field.addEventListener('blur', () => {
+                if (field.hasAttribute('required') || field.value.trim() !== '') {
+                    validateField(field);
+                }
+            });
+
+            if (field.type === 'email' || field.type === 'tel') {
+                field.addEventListener('input', () => {
+                    if (field.value.trim() !== '') {
+                        validateField(field);
+                    }
+                });
+            }
+        });
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            let isValid = true;
+
+            document.querySelectorAll('.error-message').forEach(el => {
+                el.style.display = 'none';
+                el.classList.remove('show');
+            });
+
+            form.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(el => {
+                el.classList.remove('error');
+            });
+
+            const fieldsToValidate = form.querySelectorAll('input, select, textarea');
+            fieldsToValidate.forEach(field => {
+                if (field.hasAttribute('required') || field.value.trim() !== '') {
+                    if (!validateField(field)) {
+                        isValid = false;
+                    }
+                }
+            });
+
+            if (isValid) {
+                const submitBtn = document.getElementById('submitBtn');
+                const btnText = document.getElementById('btnText');
+
+                submitBtn.disabled = true;
+                btnText.textContent = isGerman ? 'Wird verarbeitet...' : 'Processing...';
+
+                const formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            btnText.textContent = isGerman ? '✓ Erfolgreich gesendet!' : '✓ Sent Successfully!';
+                            submitBtn.classList.add('success');
+
+                            const successDiv = document.createElement('div');
+                            successDiv.className = 'success-message';
+                            successDiv.innerHTML = `
+            <h3 class="success-title">${isGerman ? 'Vielen Dank für Ihre Anfrage!' : 'Thank You for Your Inquiry!'}</h3>
+            <p class="success-text">${isGerman
+                                    ? 'Wir haben Ihre Hartmetall-Produktanfrage erhalten. Unser technischer Vertriebsspezialist wird Sie innerhalb von <strong>24 Geschäftsstunden</strong> kontaktieren.'
+                                    : 'We have received your hard alloy product inquiry. Our technical sales specialist will contact you within <strong>24 business hours</strong>.'
+                                }</p>
+          `;
+
+                            form.querySelector('.trust-notice').before(successDiv);
+
+                            setTimeout(() => {
+                                form.reset();
+                                submitBtn.disabled = false;
+                                btnText.textContent = isGerman
+                                    ? 'Anfrage an Micro-Precision senden'
+                                    : 'Submit Inquiry to Micro-Precision';
+                                submitBtn.classList.remove('success');
+                                successDiv.remove();
+                            }, 3000);
+
+                        } else {
+                            throw new Error('Form submission failed');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Submission error:', error);
+                        btnText.textContent = isGerman ? 'Fehler - Bitte erneut versuchen' : 'Error - Please try again';
+                        submitBtn.disabled = false;
+
+                        const errorDiv = document.createElement('div');
+                        errorDiv.className = 'error-message';
+                        errorDiv.style.cssText = 'background: #fed7d7; border: 1px solid #fc8181; border-radius: 6px; padding: 1rem; margin: 1rem 0; text-align: center;';
+                        errorDiv.textContent = isGerman
+                            ? 'Leider ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.'
+                            : 'Sorry, an error occurred. Please try again or contact us directly.';
+
+                        form.querySelector('.form-submit').before(errorDiv);
+                        setTimeout(() => errorDiv.remove(), 5000);
+                    });
+            }
+        });
+    });
+</script>

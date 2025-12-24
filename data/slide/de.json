@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Micro-Precision: Hartmetall-Targets",
+    "image": "img/slide/slide03.jpg",
+    "color": "text-cyan-400"
+  },
+  {
+    "title": "Qualität zuerst, aufrichtiger Service",
+    "description": "Umfassende Unterstützung von der technischen Beratung bis zum After-Sales-Service.",
+    "image": "img/slide/slide02.jpg",
+    "color": "text-white"
+  },
+  {
+    "title": "Hochwertige Materialien, Präzisionsfertigung",
+    "description": "Lieferung von Hochleistungs-Wolframkarbidprodukten an Kunden weltweit.",
+    "image": "img/slide/slide01.jpg",
+    "color": "text-black"
+  }
+]

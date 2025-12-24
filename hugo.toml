@@ -1,18 +1,16 @@
 baseURL = "https://mpccarbide.com"
 title = "Micro-Precision Carbide "
-languageCode = "zh"
-DefaultContentLanguage = "zh"
+DefaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 enableInlineShortcodes = true
 theme = "tella"
 enableRobotsTXT = true
 
 
-[params]
 
+[params]
   showBlog = true
   mainSections = ['product']
-  blogTitle = "Main Products"
-  companyName = "Micro-Precision Carbide"
   googleFonts = true
 
   [params.logo]
@@ -20,56 +18,101 @@ enableRobotsTXT = true
     alt = "WC Logo"
     size = "h-14"
 
-  [params.site]
-  
-
   [params.icon]
     fontawesome = true
-
-  [params.homepage_meta_tags]
 
   [params.contact]
     email = "info@mpccarbide.com"
     phone = "+86-18681336970"
-   
 
-[menu]
-  [[menu.main]]
+# ============= 英文语言配置 =============
+[languages.en]
+  languageName = "English"
+  weight = 1
+  contentDir = "content/en"
+
+  [languages.en.params]
+    blogTitle = "Main Products"
+    companyName = "Micro-Precision Carbide"
+
+  # 英文主菜单
+  [[languages.en.menu.main]]
     identifier = "home"
     name = "Home"
     url = "/"
     weight = 1
-
-  [[menu.main]]
+  [[languages.en.menu.main]]
     identifier = "products"
     name = "Products"
     url = "/product/"
     weight = 2
-
-  [[menu.main]]
+  [[languages.en.menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
     weight = 3
-
-  [[menu.main]]
+  [[languages.en.menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
     weight = 4
 
-  # Footer Menu
-  [[menu.footer]]
+  # 英文页脚菜单
+  [[languages.en.menu.footer]]
     name = "Home"
     url = "/"
     weight = 3
-  [[menu.footer]]
+  [[languages.en.menu.footer]]
     name = "Email: info@mpccarbide.com"
     url = "/contact/"
-    weight=1 
-
-  [[menu.footer]]
-    name = "Phone: +86-18681336970"  
+    weight = 1
+  [[languages.en.menu.footer]]
+    name = "Phone: +86-18681336970"
     url = "/contact/"
-    weight=2
- 
+    weight = 2
+
+# ============= 德文语言配置 =============
+[languages.de]
+  languageName = "Deutsch"
+  weight = 2
+  contentDir = "content/de"
+
+  [languages.de.params]
+    blogTitle = "Hauptprodukte"
+    companyName = "Micro-Precision Carbide"
+
+  # 德文主菜单
+  [[languages.de.menu.main]]
+    identifier = "home"
+    name = "Startseite"
+    url = "/de/"           
+    weight = 1
+  [[languages.de.menu.main]]
+    identifier = "products"
+    name = "Produkte"
+    url = "/de/product/"   
+    weight = 2
+  [[languages.de.menu.main]]
+    identifier = "about"
+    name = "Über uns"
+    url = "/de/about/"     
+    weight = 3
+  [[languages.de.menu.main]]
+    identifier = "contact"
+    name = "Kontakt"
+    url = "/de/contact/"   
+    weight = 4
+
+  # 德文页脚菜单
+  [[languages.de.menu.footer]]
+    name = "Startseite"
+    url = "/de/"           
+    weight = 3
+  [[languages.de.menu.footer]]
+    name = "E-Mail: info@mpccarbide.com"
+    url = "/de/contact/"   
+    weight = 1
+  [[languages.de.menu.footer]]
+    name = "Telefon: +86-18681336970"  
+    url = "/de/contact/"   
+    weight = 2

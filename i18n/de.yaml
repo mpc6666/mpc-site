@@ -1,0 +1,125 @@
+- id: logo_alt_text
+  translation: "Logo der Micro-Precision Carbide"
+
+- id: brand_tagline
+  translation: "Micro-Precision: Hartmetall-Targets"
+
+- id: site_name_short
+  translation: "Micro-Precision"
+
+- id: copyright_notice
+  translation: "© Micro-Precision Carbide {{.Year}} Alle Rechte vorbehalten."
+
+- id: link_all_products
+  translation: "Alle Produkte >"
+
+- id: form_title
+  translation: “Anfrage zu Hartmetallprodukten”
+
+- id: form_subtitle
+  translation: “Bitte geben Sie Ihre Daten an. Unser technisches Vertriebsteam von Micro-Precision Carbide wird Sie innerhalb von <strong>24 Geschäftsstunden</strong> kontaktieren.”
+
+- id: section_contact
+  translation: “Kontaktinformationen”
+- id: section_product
+  translation: “Produkt- & Projektinformationen”
+
+- id: label_name
+  translation: “Vollständiger Name”
+- id: label_email
+  translation: “Geschäfts-E-Mail”
+- id: label_company
+  translation: “Unternehmen / Organisation”
+- id: label_country
+  translation: “Land / Region”
+- id: label_phone
+  translation: “Telefon / WhatsApp (Optional)”
+- id: label_website
+  translation: “Unternehmenswebsite (Optional)”
+- id: label_product
+  translation: “Produktinteresse / Anwendung”
+- id: label_message
+  translation: “Spezifische Anforderungen / Projektbeschreibung”
+- id: label_privacy
+  translation: “Datenschutzzustimmung”
+
+- id: placeholder_name
+  translation: “z.B., Max Mustermann”
+- id: placeholder_email
+  translation: “max@firma.de”
+- id: placeholder_company
+  translation: “Ihr Unternehmensname”
+- id: placeholder_phone
+  translation: “+49 123 456789”
+- id: placeholder_website
+  translation: “https://www.example.com”
+- id: placeholder_message
+  translation: “Bitte geben Sie Details an wie:\n- Anwendung oder Branche\n- Teilenummer oder Zeichnung (falls vorhanden)\n- Wichtige Spezifikationen (Qualität, Abmessungen, Toleranz, Beschichtung)\n- Jährliche Menge oder Projektvolumen”
+
+- id: placeholder_country_default
+  translation: “Wählen Sie Ihr Land”
+- id: country_group_eu_na
+  translation: “Europa & Nordamerika”
+- id: country_group_other
+  translation: “Andere Regionen”
+- id: country_option_other
+  translation: “Andere (bitte angeben)”
+
+- id: placeholder_product_default
+  translation: “Wählen Sie eine Produktkategorie”
+- id: product_group_cutting
+  translation: “Schneidwerkzeuge & Wendeschneidplatten”
+- id: product_cutting_insert
+  translation: “Wendeschneidplatten”
+- id: product_cutting_tool
+  translation: “Schneidwerkzeuge”
+- id: product_group_mining
+  translation: “Bergbau & Verschleißteile”
+- id: product_mining_tools
+  translation: “Bergbauwerkzeuge”
+- id: product_mining_parts
+  translation: “Hartmetall-Bergbauteile”
+- id: product_wear_resistant
+  translation: “Verschleißfeste Legierungsteile”
+- id: product_group_precision
+  translation: “Präzisionskomponenten”
+- id: product_precision_components
+  translation: “Präzisionskomponenten”
+- id: product_large_scale_parts
+  translation: “Großformatige Legierungsteile”
+- id: product_profiles
+  translation: “Profile & Sonderformen”
+
+- id: privacy_text
+  translation: “Ich stimme zu, dass meine Daten ausschließlich zur Bearbeitung dieser Anfrage und für eventuelle Folgekommunikation verwendet werden. Sie können die vollständige <a href=\”/privacy-policy\” target=\”_blank\”>Datenschutzrichtlinie</a> von Micro-Precision Carbide einsehen.”
+
+- id: btn_submit
+  translation: “Anfrage an Micro-Precision senden”
+- id: btn_processing
+  translation: “Wird verarbeitet...”
+- id: btn_success
+  translation: “✓ Erfolgreich gesendet!”
+
+- id: field_hint
+  translation: “Detaillierte Informationen helfen uns, ein genaues Angebot zu erstellen.”
+
+- id: error_required
+  translation: “Dieses Feld ist erforderlich.”
+- id: error_name
+  translation: “Bitte geben Sie Ihren vollständigen Namen ein.”
+- id: error_email
+  translation: “Bitte geben Sie eine gültige E-Mail-Adresse ein.”
+- id: error_phone
+  translation: “Bitte geben Sie eine gültige Telefonnummer ein.”
+- id: error_message
+  translation: “Bitte geben Sie detaillierte Anforderungen an (mind. 20 Zeichen).”
+- id: error_privacy
+  translation: “Sie müssen der Datenschutzrichtlinie zustimmen.”
+
+- id: success_title
+  translation: “Vielen Dank für Ihre Anfrage!”
+- id: success_text
+  translation: “Wir haben Ihre Hartmetall-Produktanfrage erhalten. Unser technischer Vertriebsspezialist wird Sie innerhalb von <strong>24 Geschäftsstunden</strong> kontaktieren.”
+
+- id: trust_notice
+  translation: “Ihre Informationen werden sicher übertragen und nicht an Dritte weitergegeben.<br>Micro-Precision Carbide - ISO 9001 zertifizierter Hersteller”

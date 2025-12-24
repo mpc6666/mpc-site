@@ -1,4 +1,4 @@
-<footer class="bg-tlgray-100">
+﻿<footer class="bg-tlgray-100">
     {{ if not .IsHome }}
     <script src='{{ "/js/clipboard.min.js" | relURL }}'></script>
     <script src='{{ "/js/highlight.min.js" | relURL }}'></script>
@@ -43,7 +43,7 @@
     {{ end }}
     <div class="flex items-center justify-between flex-wrap bg-gray-800 p-8 text-white">
         <div class="items-center text-xl text-grey-900 mr-6">
-            {{ .Site.Params.site.name }}
+            {{ i18n "site_name_short" }} 
         </div>
         <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto" id="mobileMenu">
             <div class="text-lg lg:flex-grow">
@@ -52,7 +52,7 @@
                 {{ range .Site.Menus.footer }}
                 <a href="{{ .URL }}" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-8">
                     {{ if not .Pre }}
-                    {{ .Name }}
+                    {{ .Name }} 
                     {{ else }}
                     {{ .Pre }}
                     {{ end }}
@@ -62,6 +62,6 @@
         </div>
     </div>
     <div class="copy pl-8 py-5 bg-tlgray-700 text-white text-md">
-        &copy; {{site.Title}} {{ now.Year }} All Rights Reserved.
+        {{ i18n "copyright_notice" (dict "Year" now.Year) }} 
     </div>
 </footer>

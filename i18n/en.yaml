@@ -1,0 +1,125 @@
+- id: logo_alt_text
+  translation: "Logo of Micro-Precision Carbide"
+
+- id: brand_tagline
+  translation: "Micro-Precision Carbide" 
+
+- id: site_name_short
+  translation: "Micro-Precision" 
+
+- id: copyright_notice
+  translation: "© Micro-Precision Carbide {{.Year}} All Rights Reserved." 
+
+- id: link_all_products
+  translation: "All Products >" 
+
+- id: form_title
+  translation: “Hard Alloy (Carbide) Product Inquiry”
+
+- id: form_subtitle
+  translation: “Please provide your details. Our technical sales team at Micro-Precision Carbide will contact you within <strong>24 business hours</strong>.”
+
+- id: section_contact
+  translation: “Contact Information”
+- id: section_product
+  translation: “Product & Project Details”
+
+- id: label_name
+  translation: “Full Name”
+- id: label_email
+  translation: “Business Email”
+- id: label_company
+  translation: “Company / Organization”
+- id: label_country
+  translation: “Country / Region”
+- id: label_phone
+  translation: “Phone / WhatsApp (Optional)”
+- id: label_website
+  translation: “Company Website (Optional)”
+- id: label_product
+  translation: “Product Interest / Application”
+- id: label_message
+  translation: “Specific Requirements / Project Description”
+- id: label_privacy
+  translation: “Data Protection Consent”
+
+- id: placeholder_name
+  translation: “e.g., John Smith”
+- id: placeholder_email
+  translation: “john@company.com”
+- id: placeholder_company
+  translation: “Your company name”
+- id: placeholder_phone
+  translation: “+1 234 567 8900”
+- id: placeholder_website
+  translation: “https://www.example.com”
+- id: placeholder_message
+  translation: “Please include key details such as:\n- Application or Industry\n- Part Number or Drawing (if available)\n- Key Specifications (Grade, Dimensions, Tolerance, Coating)\n- Annual Quantity or Project Volume”
+
+- id: placeholder_country_default
+  translation: “Select your country”
+- id: country_group_eu_na
+  translation: “Europe & North America”
+- id: country_group_other
+  translation: “Other Regions”
+- id: country_option_other
+  translation: “Other (please specify)”
+
+- id: placeholder_product_default
+  translation: “Select a product category”
+- id: product_group_cutting
+  translation: “Cutting Tools & Inserts”
+- id: product_cutting_insert
+  translation: “Cutting Inserts”
+- id: product_cutting_tool
+  translation: “Cutting Tools”
+- id: product_group_mining
+  translation: “Mining & Wear-Resistant Parts”
+- id: product_mining_tools
+  translation: “Mining Tools”
+- id: product_mining_parts
+  translation: “Mining Carbide Parts”
+- id: product_wear_resistant
+  translation: “Wear-Resistant Alloy Parts”
+- id: product_group_precision
+  translation: “Precision Components”
+- id: product_precision_components
+  translation: “Precision Components”
+- id: product_large_scale_parts
+  translation: “Large-Scale Alloy Parts”
+- id: product_profiles
+  translation: “Profiles & Special Shapes”
+
+- id: privacy_text
+  translation: “I agree that my data will be used exclusively for processing this inquiry and for any necessary follow-up communication. You can review the full <a href=\”/privacy-policy\” target=\”_blank\”>Privacy Policy</a> of Micro-Precision Carbide.”
+
+- id: btn_submit
+  translation: “Submit Inquiry to Micro-Precision”
+- id: btn_processing
+  translation: “Processing...”
+- id: btn_success
+  translation: “✓ Sent Successfully!”
+
+- id: field_hint
+  translation: “Detailed information helps us provide an accurate quotation.”
+
+- id: error_required
+  translation: “This field is required.”
+- id: error_name
+  translation: “Please enter your full name.”
+- id: error_email
+  translation: “Please enter a valid email address.”
+- id: error_phone
+  translation: “Please enter a valid phone number.”
+- id: error_message
+  translation: “Please provide detailed requirements (min. 20 characters).”
+- id: error_privacy
+  translation: “You must agree to the privacy policy.”
+
+- id: success_title
+  translation: “Thank You for Your Inquiry!”
+- id: success_text
+  translation: “We have received your hard alloy product inquiry. Our technical sales specialist will contact you within <strong>24 business hours</strong>.”
+
+- id: trust_notice
+  translation: “Your information is securely transmitted and never shared with third parties.<br>Micro-Precision Carbide - ISO 9001 Certified Manufacturer”
