@@ -4,10 +4,15 @@
       "HUGO_VERSION": "0.140.0"
     }
   },
+  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "destination": "/index.html"
+    },
+    {
+      "source": "/de/:path*",
+      "destination": "/de/index.html"
     }
   ]
 }
