@@ -25,7 +25,6 @@ enableRobotsTXT = true
     email = "info@mpccarbide.com"
     phone = "+86-18681336970"
 
-# ============= 英文语言配置 =============
 [languages.en]
   languageName = "English"
   weight = 1
@@ -35,7 +34,6 @@ enableRobotsTXT = true
     blogTitle = "Main Products"
     companyName = "Micro-Precision Carbide"
 
-  # 英文主菜单
   [[languages.en.menu.main]]
     identifier = "home"
     name = "Home"
@@ -57,7 +55,6 @@ enableRobotsTXT = true
     url = "/contact/"
     weight = 4
 
-  # 英文页脚菜单
   [[languages.en.menu.footer]]
     name = "Home"
     url = "/"
@@ -71,48 +68,46 @@ enableRobotsTXT = true
     url = "/contact/"
     weight = 2
 
-# ============= 德文语言配置 =============
 [languages.de]
   languageName = "Deutsch"
   weight = 2
   contentDir = "content/de"
+  baseURL = "https://de.mpccarbide.com/"
 
   [languages.de.params]
     blogTitle = "Hauptprodukte"
     companyName = "Micro-Precision Carbide"
 
-  # 德文主菜单
   [[languages.de.menu.main]]
     identifier = "home"
     name = "Startseite"
-    url = "/de/"           
+    url = "/"          
     weight = 1
   [[languages.de.menu.main]]
     identifier = "products"
     name = "Produkte"
-    url = "/de/product/"   
+    url = "/product/"   
     weight = 2
   [[languages.de.menu.main]]
     identifier = "about"
     name = "Über uns"
-    url = "/de/about/"     
+    url = "/about/"     
     weight = 3
   [[languages.de.menu.main]]
     identifier = "contact"
     name = "Kontakt"
-    url = "/de/contact/"   
+    url = "/contact/"   
     weight = 4
 
-  # 德文页脚菜单
   [[languages.de.menu.footer]]
     name = "Startseite"
-    url = "/de/"           
+    url = "/"           
     weight = 3
   [[languages.de.menu.footer]]
     name = "E-Mail: info@mpccarbide.com"
-    url = "/de/contact/"   
+    url = "/contact/"   
     weight = 1
   [[languages.de.menu.footer]]
     name = "Telefon: +86-18681336970"  
-    url = "/de/contact/"   
+    url = "/contact/"   
     weight = 2
