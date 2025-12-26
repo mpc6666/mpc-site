@@ -5,14 +5,12 @@
     }
   },
   "cleanUrls": true,
-  "rewrites": [
+  "trailingSlash": false,
+  "redirects": [
     {
-      "source": "/:path*",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/de/:path*",
-      "destination": "/de/index.html"
+      "source": "/",
+      "destination": "/en",
+      "permanent": false
     }
   ]
 }
