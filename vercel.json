@@ -6,6 +6,16 @@
   },
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/en/:path*",
+      "destination": "/en/:path*"
+    },
+    {
+      "source": "/de/:path*",
+      "destination": "/de/:path*"
+    }
+  ],
   "redirects": [
     {
       "source": "/",
@@ -28,6 +38,28 @@
       ],
       "destination": "/de/",
       "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "mpccarbide.com"
+        }
+      ],
+      "destination": "/en/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "de.mpccarbide.com"
+        }
+      ],
+      "destination": "/de/:path*",
+      "permanent": false
     }
   ]
 }
