@@ -12,22 +12,22 @@
       "has": [
         {
           "type": "host",
-          "value": "de.mpccarbide.com"
+          "value": "mpccarbide.com"
         }
       ],
-      "destination": "/de/",
+      "destination": "/en/",
       "permanent": true
     },
     {
-      "source": "/:path*",
+      "source": "/",
       "has": [
         {
           "type": "host",
           "value": "de.mpccarbide.com"
         }
       ],
-      "destination": "/de/:path*",
-      "permanent": false
+      "destination": "/de/",
+      "permanent": true
     }
   ]
 }
