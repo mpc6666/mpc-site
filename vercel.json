@@ -9,7 +9,24 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/en",
+      "has": [
+        {
+          "type": "host",
+          "value": "de.mpccarbide.com"
+        }
+      ],
+      "destination": "/de/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "de.mpccarbide.com"
+        }
+      ],
+      "destination": "/de/:path*",
       "permanent": false
     }
   ]

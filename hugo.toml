@@ -1,7 +1,8 @@
 baseURL = "https://mpccarbide.com"
 title = "Micro-Precision Carbide "
+languageCode = "en-us"
 DefaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 enableInlineShortcodes = true
 theme = "tella"
 enableRobotsTXT = true
@@ -72,7 +73,7 @@ enableRobotsTXT = true
   languageName = "Deutsch"
   weight = 2
   contentDir = "content/de"
-  baseURL = "https://de.mpccarbide.com/"
+  baseURL = "https://mpccarbide.com/" 
 
   [languages.de.params]
     blogTitle = "Hauptprodukte"
@@ -90,7 +91,7 @@ enableRobotsTXT = true
     weight = 2
   [[languages.de.menu.main]]
     identifier = "about"
-    name = "Über uns"
+    name = "脺ber uns"
     url = "/about/"     
     weight = 3
   [[languages.de.menu.main]]
